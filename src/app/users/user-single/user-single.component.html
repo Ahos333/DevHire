@@ -1,0 +1,55 @@
+
+    <section class="section">
+    <div class="container">
+        <div class="card is-grid" *ngIf="user">
+            <div class="card-header">
+                <h1 class="card-header-title has-text-centered">{{user?.name }}</h1>
+            </div>
+            <div class="card-middle is-flex is-align-items-center is-justify-content-center py-3">
+                <div class="card-image image is-128x128 py-5 mr-5">
+                    <img class="is-rounded" [src]="user?.avatar_url" alt="User Avatar Image">
+                </div>
+                <div class="card-content">
+                    <h2 class="title is-text-capitalize has-text-black has-text-bold is-size-4">Github Username: 
+                        <span class="is-size-5">{{ user?.login }}</span>
+                    </h2>
+                    <h2 class="title is-size-4">Github Id: 
+                        <span class="is-size-5">{{ user?.id }}</span>
+                    </h2>
+                </div>
+            </div>
+            
+            <div class="card-content is-flex is-justify-content-center is-align-items-center has-background-grey-lighter">
+                <div class="card-content">
+                    <h3 class="has-text-grey">Followers:</h3>
+                    <h3 class="has-text-black">{{ user?.followers }}</h3>
+                </div>
+                <div class="card-content">
+                    <h3 class="has-text-grey">Repos:</h3>
+                    <h3 class="has-text-black">{{ user?.public_repos }}</h3>
+                </div>
+                <div class="card-content">
+                    <h3 class="has-text-grey">Following:</h3>
+                    <h3 class="has-text-black is-text-centered">{{ user?.following }}</h3>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="card-footer-item">
+                    <a class="button is-info" href="{{ user.html_url }}">Github</a>
+                </div>
+                <div class="card-footer-item">
+                    <a class="button is-success" href="/">Hire</a>
+                </div>
+                <div class="card-footer-item">
+                    <a class="button is-info" href="{{ user.blog }}">Blog</a>
+                </div>
+                
+            </div>
+            
+        </div> 
+    </div>
+</section>
+
+
+
+

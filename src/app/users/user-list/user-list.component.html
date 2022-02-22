@@ -1,0 +1,26 @@
+<section class="section">
+    <div class="container">
+        <h1 class="title is-text-centered">Developers</h1>
+        <div class="columns is-multiline" *ngIf="users">
+            <div class="column is-4" *ngFor="let user of users">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="level is-flex is-align-items-center">
+                            <div class="level-left">
+                                <a class="level-item dev-username" routerLink="/users/{{ user.login }}">{{ user.login }}</a>
+                            </div>
+                            <div class="level-right image is-128x128">
+                                <img class="level-item" src="{{ user.avatar_url }}" alt="User Photo">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="card-content is-flex is-justify-content-center has-background-light">
+                        <a class="button is-primary mr-5" routerLink="/users/{{ user.login }}">Profile</a>
+                        <a class="button is-info mr-5" href="{{ user.html_url }}">Github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

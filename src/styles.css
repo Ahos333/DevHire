@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+    color: #fff;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#wrapper {
+    display: flex;
+    flex: 1;
+}
